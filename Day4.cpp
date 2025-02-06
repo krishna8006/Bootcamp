@@ -22,7 +22,7 @@
 //     return 0;
 // }
 
-//-----Second largest
+//-----Second largest in an array
 
 // #include<iostream>
 // using namespace std;
