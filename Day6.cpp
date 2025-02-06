@@ -2,6 +2,7 @@
 
 
 #include<iostream>
+#include<algorithm>
 using namespace std;
 // int main(){
 //     int start,end;
@@ -136,9 +137,79 @@ using namespace std;
 // }
 
 //-----Find Equillibrium point in array
+// int main(){
+//     int i,j,leftsum,rightsum;
+//     int n=5;
+//     int arr[]={2,3,-1,8,4};
+//     for(j)
+// }
+
+//-----Pair in an array
+// int main(){
+//     int low,high;
+//     int target=12;
+//     int n=7;
+//     int arr[]={2,3,4,5,6,7,8};
+//     for(low=0;low<n;low++){
+//         for(high=n-1;high>low;high--){
+    
+//     if(low+high==target){
+//         cout<<
+//  }
+//          }
+//     }
+// }
+
+//-----Chocolate distribution
+// int main(){
+//     int i;
+//     int n=6,m=3;
+//     int mindiff=INT16_MAX,curr=0;
+//     int arr[]={2,1,4,9,7,3};
+//     sort(arr,arr+n);
+//     for(i=0;i<=m;i++){
+//     curr=arr[i+m-1]-arr[i];
+//      mindiff=min(curr,mindiff);
+//     }
+//     cout<<mindiff<<endl<<" ";
+
+//     return 0;
+// }
+
+//-----Triplet sum
+// int main(){
+//     int i,n=7;
+//     int start=1,end=n-1;
+//     int target=5,newtarget;
+//     int arr[]={7,10,1,3,6,9,2};
+//     sort(arr,arr+n);
+//     for(i=0;i<n;i++){
+//         newtarget=target-arr[i];
+//         while(start<=end){
+//             if(arr[start]+arr[end]==newtarget)
+//         }
+//         cout<<
+//     }
+
+//     return 0;
+// }
+
+//-----Buy & sell stocks
 int main(){
-    int i,j,leftsum,rightsum;
-    int n=5;
-    int arr[]={2,3,-1,8,4};
-    for(j)
+    int i,n=7;
+    int profit=0;
+    int arr[n]={7,10,1,3,6,9,2};
+    int minval=arr[0];
+    for(i=1;i<n;i++){
+        int cp;
+        if(minval>arr[i]){
+            minval=arr[i];
+        }
+        cp=arr[i]-minval;
+        if(cp>profit){
+            profit=cp;
+        }
+    }
+    cout<<profit<<endl;
+    return 0;
 }
