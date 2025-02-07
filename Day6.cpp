@@ -195,21 +195,130 @@ using namespace std;
 // }
 
 //-----Buy & sell stocks
+// int main(){
+//     int i,n=7;
+//     int profit=0;
+//     int arr[n]={7,10,1,3,6,9,2};
+//     int minval=arr[0];
+//     for(i=1;i<n;i++){
+//         int cp;
+//         if(minval>arr[i]){
+//             minval=arr[i];
+//         }
+//         cp=arr[i]-minval;
+//         if(cp>profit){
+//             profit=cp;
+//         }
+//     }
+//     cout<<profit<<endl;
+//     return 0;
+// }
+
+//-----Print 3X5 matrix of first 15 even numbers
+// int main(){
+//     int i,j;
+//     int arr[3][5]={2,4,6,8,10,12,14,16,18,20,22,24,26,28,30};
+//     for(i=0;i<3;i++){
+//         for(j=0;j<5;j++){
+//             cout<<arr[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//    return 0;
+// }
+
+//-----Print in snake pattern
+// int main(){
+//     int i,j,n;
+//     int arr[3][5]={2,4,6,8,10,12,14,16,18,20,22,24,26,28,30};
+//     for(i=0;i<3;i++){
+//         if(i%2==0){
+//             for(j=0;j<5;j++){
+//                 cout<<arr[i][j]<<" ";
+//             }}
+//         else if(i%2!=0){
+//             for(j=5-1;j>=0;j--){
+//         cout<<arr[i][j]<<" "; 
+//         }
+//         }
+//     }
+
+//     return 0;
+// }
+
+//-----Print the Boundry of matrix
+// int main(){
+//     int i,j;
+//     int arr[4][5]={2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40};
+//     for(i=0;i<4;i++){
+//         if(i==0){
+//             for(j=0;j<5;j++)
+//             cout<<arr[i][j]<<" ";
+//         }
+//         else if(i==1){
+//             for(j=0;j<5;j++){
+//                 if(j==0||j==4){
+//                     cout<<arr[i][j]<<" ";
+//                 }
+//             }
+//         }
+//         else if(i==2){
+//             for(j=0;j<5;j++){
+//                 if(j==0||j==4){
+//                     cout<<arr[i][j]<<" ";
+//                 }
+//             }
+//         }
+//         else{
+//             for(j=0;j<5;j++){
+//                 cout<<arr[i][j]<<" ";
+//             }
+//         }
+//         cout<<endl;
+//     }
+
+//     return 0;
+// }
+
+//-----Transpose the matrix
+// int main(){
+//     int i,j;
+//     int arr[4][4]={2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32};
+//     int arr2[4][4]={2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32};
+//     for(i=0;i<4;i++){
+//         for(j=0;j<4;j++){
+//         int temp=arr2[i][j];
+//         arr2[i][j]=arr[j][i];
+//         arr[i][j]=temp;
+//     }
+//     }
+//     for(i=0;i<4;i++){
+//         for(j=0;j<4;j++){
+//             cout<<arr2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     return 0;
+// }
+
+//-----Rotate the matrix top 90 degree
 int main(){
-    int i,n=7;
-    int profit=0;
-    int arr[n]={7,10,1,3,6,9,2};
-    int minval=arr[0];
-    for(i=1;i<n;i++){
-        int cp;
-        if(minval>arr[i]){
-            minval=arr[i];
-        }
-        cp=arr[i]-minval;
-        if(cp>profit){
-            profit=cp;
+    int i,j,temp;
+    int arr[3][3]={1,2,3,4,5,6,7,8,9};
+    int arr2[3][3]={1,2,3,4,5,6,7,8,9};
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            temp=arr2[i][j];
+            arr2[i][j]=arr[j][i];
+            arr[i][j]=temp;
         }
     }
-    cout<<profit<<endl;
-    return 0;
+    for(i=0;i<3;i++){
+        for(j=2;j>=0;j--){
+            cout<<arr2[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
 }
